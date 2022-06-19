@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delivery Calculator - Расчет стоимости Вашего путешествия</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=92b1df4a-2fe3-4e4a-a3e7-354cf3e7a7bf" type="text/javascript"></script>
+    <script src="deliveryCalculator.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+
+<body>
+    <header>
+        <p>DELIVERY CALCULATOR</p>
+    </header>
+    <p id="welcome">
+        Добро пожаловать в Delivery Calculator! <br>
+        Для начала, пожалуйста, введите необходимую информацию о поездке!
+    </p>
+    <form>
+    Откуда: <input type="text" id="from" value="" list="fromSuggested">
+            <datalist id="fromSuggested">
+            </datalist>
+    Куда: <input type="text" id="to" value="" list="toSuggested">
+          <datalist id="toSuggested">
+          </datalist>
+     <br>
+    Расход бензина: <input type="number" id="fuel" value="10"> л/100км. <br>
+    Стоимость 1л. бензина: <input type="number" id="fuelpr" value="50">р. <br>
+    <input type="button" id="start" value="Поехали!">
+    </form>
+    
+    
+     <div class="container">
+        <div class="box"> 
+            <div id="car">
+                <h3>Стоимость поездки на авто:</h3>
+                Расстояние: <span id="length"></span><br>
+                Стоимость: <span id="price"></span>
+            </div>
+
+            <div id="train">
+                <h3>Стоимость поездки на поезде:</h3>
+                <div id="t1">
+                </div>
+            </div>
+
+
+             <div id="plane">
+                <h3>Стоимость полета на самолете:</h3>
+                <div id="t2">
+                </div>
+            </div>
+        </div>
+        <p id="mapcom">Маршрут на карте:</p>
+        <div id="map"></div>
+    </div>
+</body>
+<script src="deliveryCalculator.js" type="text/javascript"></script>
+</html>
